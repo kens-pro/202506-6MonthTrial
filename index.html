@@ -361,7 +361,7 @@
             .cta-button { font-size: 17px; padding: 15px 30px; }
         }
         
-        @media (max-width: 480px) {
+              @media (max-width: 480px) {
             h1 { font-size: 22px; letter-spacing: 0.5px; }
             .header-badge { font-size: 13px; padding: 8px 18px; margin-bottom: 10px; }
             .sub-copy { font-size: 14px; }
@@ -371,19 +371,51 @@
             .trust-badges .badge-item { flex-basis: 100%; font-size: 11px; padding: 6px 8px; } 
             .hero-cta-wrapper .micro-copy { font-size: 12px; }
 
-            .price-impact-section h2 { font-size: 22px; }
-            .comparison-table th, .comparison-table td { font-size: 13px; padding: 8px; }
-            .comparison-table .price-cell { font-size: 15px; }
-            .comparison-table .our-course .price-cell { font-size: 17px; }
-            .comparison-table { min-width: 300px; }
+            /* ▼▼▼ テーブル関連の修正・追加 ▼▼▼ */
+            .price-impact-section h2,
+            .other-lessons-comparison h2 { /* テーブルセクションの見出しを特定 */
+                font-size: 20px; /* 既存のh2の指定と合わせるか、必要なら微調整 */
+                margin-top: 20px;
+                margin-bottom: 15px;
+            }
+
+            .comparison-table-wrapper {
+                overflow-x: visible; /* 横スクロールをなくす */
+            }
+
+            .comparison-table {
+                min-width: 100%; 
+                font-size: 12px; /* テーブル全体の基準フォントサイズ */
+                /* word-break: break-all; */ /* 必要に応じてコメント解除 */
+            }
+
+            .comparison-table th, 
+            .comparison-table td {
+                padding: 6px 4px; /* パディングを詰める */
+                font-size: 11px; /* セルのフォントサイズ */
+            }
+            .comparison-table th {
+                font-size: 12px; /* ヘッダーは少し大きく */
+            }
+
+            .comparison-table .price-cell {
+                font-size: 13px; /* 価格のフォントサイズ */
+                white-space: nowrap; /* 価格は改行させない */
+            }
+            .comparison-table .our-course .price-cell {
+                font-size: 14px; /* 自社コースの価格 */
+            }
+            /* ▲▲▲ テーブル関連の修正・追加ここまで ▲▲▲ */
+            
+            /* 既存の他のスタイルはそのまま */
             .reason-section p { font-size: 14px; }
-            h2 { font-size: 20px; }
+            h2 { font-size: 20px; } /* 一般的なh2のスタイルは残す */
             h3 { font-size: 18px; }
             .feature-title { font-size: 17px; }
             .testimonial-content { font-size: 14px; }
             .star-rating { font-size: 14px; }
             .author-name { font-size: 15px; }
-            .application-flow-section h2 { font-size: 20px; }
+            .application-flow-section h2 { font-size: 20px; } /* こちらのh2も既存の指定を尊重 */
             .flow-step { flex-basis: 100%; } 
             .flow-step h3 { font-size: 16px; }
             .flow-step p { font-size: 12px; }
@@ -394,6 +426,9 @@
             .final-cta-container .cta-button { font-size: 17px; padding: 16px 30px; }
             .cta-button { font-size: 16px; padding: 14px 25px; }
         }
+
+        /* ▼▼▼ さらに小さい画面向けのCSSブロック（必要ならここに追加） ▼▼▼ */
+        /* @media (max-width: 360px) { ... } */
 /* --- Site Footer --- */
 .site-footer {
     background-color: var(--primary-dark); /* フッター背景色 */
