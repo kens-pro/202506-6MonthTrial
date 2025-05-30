@@ -7,23 +7,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --primary: #F8C8DC; /* ソフトピンク */
-            --primary-light: #FFF0F5; /* ラベンダーブラッシュ */
-            --primary-dark: #E9A8D0; /* 落ち着いたピンク */
-            --accent: #A0D2DB; /* ソフトな水色・ミント系 */
-            --accent-light: #BEE7E8; /* さらに薄い水色 */
-            --text: #5D5D5D; /* ダークグレー */
-            --text-light: #888888; /* ミドルグレー */
-            --bg-light: #FAF7F5; /* オフホワイト、少し暖色系 */
-            --bg-cream: #FEFBF6; /* クリーム色、より暖色系 */
-            --gold: #E6C670; /* 上品なゴールド */
-            --white: #ffffff;
-            --soft-shadow: rgba(0, 0, 0, 0.08);
-            --highlight-bg: rgba(233, 168, 208, 0.3); /* ハイライト背景色 */
-            --danger-red: #E74C3C; /* 注意を引く赤 */
-            --success-green: #2ECC71; /* 成功を示す緑 */
-            --star-yellow: #F1C40F; /* 星評価の色 */
-        }
+    --primary: #E9A8D0; /* ソフトピンク (少し濃いめのピンクに変更) */
+    --primary-light: #F8C8DC; /* ラベンダーブラッシュ (こちらも少し濃く、または primary との差を明確に) */
+    /* 他の色の定義はそのまま */
+    --primary-dark: #D170A4; /* さらに濃いピンク (必要であればこちらも調整) */
+    --accent: #A0D2DB; 
+    --accent-light: #BEE7E8; 
+    --text: #5D5D5D; 
+    --text-light: #888888; 
+    --bg-light: #FAF7F5; 
+    --bg-cream: #FEFBF6; 
+    --gold: #E6C670; 
+    --white: #ffffff;
+    --soft-shadow: rgba(0, 0, 0, 0.08);
+    --highlight-bg: rgba(233, 168, 208, 0.3); 
+    --danger-red: #E74C3C; 
+    --success-green: #2ECC71; 
+    --star-yellow: #F1C40F; 
+}
         
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
@@ -38,10 +39,15 @@
         }
         
         header {
-            background: linear-gradient(135deg, var(--primary-light), var(--primary));
-            padding-top: 20px; position: relative; overflow: visible; 
-            border-radius: 0 0 80px 80px; 
-        }
+    /* グラデーションの開始色と終了色を、より濃いピンク系に変更 */
+    background: linear-gradient(135deg, var(--primary-light), var(--primary-dark)); /* primary-dark を使ってより濃く */
+    /* または、単色で濃いピンクにする場合 */
+    /* background: var(--primary-dark); */
+    padding-top: 20px; 
+    position: relative; 
+    overflow: visible; 
+    border-radius: 0 0 80px 80px; 
+}
         header::after { 
             content: ''; position: absolute; bottom: -15px; left: 0; width: 100%; height: 30px; 
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23FAF7F5' fill-opacity='1' d='M0,192L48,197.3C96,203,192,213,288,208C384,203,480,181,576,176C672,171,768,181,864,197.3C960,213,1056,235,1152,229.3C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
