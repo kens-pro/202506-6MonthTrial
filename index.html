@@ -394,7 +394,108 @@
             .final-cta-container .cta-button { font-size: 17px; padding: 16px 30px; }
             .cta-button { font-size: 16px; padding: 14px 25px; }
         }
+/* --- Site Footer --- */
+.site-footer {
+    background-color: var(--primary-dark); /* フッター背景色 */
+    color: var(--white);
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 50px; /* メインコンテンツとの間隔 */
+    border-top: 5px solid var(--primary);
+}
 
+.footer-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-info {
+    margin-bottom: 30px;
+}
+
+.company-name {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--white);
+    font-family: 'Shippori Mincho', 'Noto Sans JP', serif;
+}
+
+.footer-phone-button {
+    display: inline-block;
+    background-color: var(--white);
+    color: var(--primary-dark);
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    border: 2px solid var(--primary-dark);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.footer-phone-button i {
+    margin-right: 8px;
+}
+
+.footer-phone-button:hover {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+    transform: translateY(-3px);
+}
+
+.phone-note {
+    font-size: 13px;
+    color: rgba(255,255,255,0.8);
+    margin-top: 8px;
+}
+
+.footer-social {
+    margin-bottom: 30px;
+}
+.footer-social p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: var(--white);
+}
+
+.social-icons a {
+    color: var(--white);
+    font-size: 28px; /* アイコンサイズ */
+    margin: 0 12px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block; /* ホバーエフェクトのため */
+}
+
+.social-icons a:hover {
+    color: var(--accent-light); /* ホバー時の色 */
+    transform: scale(1.1);
+}
+
+.footer-copyright p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 0;
+}
+
+/* フッター用レスポンシブ調整 */
+@media (max-width: 768px) {
+    .site-footer {
+        padding: 30px 15px;
+    }
+    .company-name {
+        font-size: 18px;
+    }
+    .footer-phone-button {
+        font-size: 17px;
+        padding: 10px 20px;
+    }
+    .social-icons a {
+        font-size: 26px;
+        margin: 0 10px;
+    }
+}
     </style>
 </head>
 <body>
@@ -611,6 +712,33 @@
     </div>
     <br><br>
 
+      <!-- ▼▼▼ ここからフッターのHTMLを貼り付け ▼▼▼ -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <p class="company-name">株式会社トリイ</p>
+                <a href="tel:0740-22-2063" class="footer-phone-button">
+                    <i class="fas fa-phone-alt"></i> 0740-22-2063
+                </a>
+                <p class="phone-note">（タップして電話をかける）</p>
+            </div>
+            <div class="footer-social">
+                <p>公式SNSもチェック！</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/torii__music/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://x.com/toriimusic" target="_blank" rel="noopener noreferrer" aria-label="X (旧Twitter)">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>© 2025 株式会社トリイ. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- ▲▲▲ ここまでフッターのHTML ▲▲▲ -->
     <script>
         window.onload = function () {
             // ★★★ 締切日時を設定 (年-月-日T時:分:秒) ★★★
